@@ -26,5 +26,5 @@ function touch(){
 		[string]$newfilename
 	)
     Write-Host ' '     # for blank line
-    & write-output 'Clear-Host ' >  $newfilename
+    & write-output 'Welcome!' >  $newfilename
 }
