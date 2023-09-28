@@ -1,6 +1,6 @@
-# PowerShell functions which alias Git commands, and touch().
+# PowerShell functions to make my life easier.
 
-# git Status
+# git status
 function gs(){
 	write-host ' '   # for blank line
     & git status
@@ -18,7 +18,19 @@ function gba(){
     & git branch --all
 }
 
-# This mimics linux touch command.
+# git add
+function ga(){
+    Write-Host ' '     # for blank line
+    & git add .
+}
+
+# git checkout main
+function gitcm(){
+    Write-Host ' '     # for blank line
+    & git checkout main
+}
+
+# touch for creating files.
 function touch(){
 	param (
 		[Parameter (Mandatory=$true)]
@@ -26,5 +38,12 @@ function touch(){
 		[string]$newfilename
 	)
     Write-Host ' '     # for blank line
-    & write-output 'Welcome!' >  $newfilename
+
+    if($newfilename -match '.+ps1'){
+        & write-output "Set-StrictMode -Version latest" >  $newfilename
+        & write-output "Clear-Host" >>  $newfilename
+    }
+    else{
+        & write-output "# " >  $newfilename
+    }
 }
