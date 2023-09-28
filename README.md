@@ -2,7 +2,7 @@
 
 I got tired of typing a few Git commands, and wanted to alias them.  
 git status           -->  gs   
-git log --oneline "  -->  glo  
+git log --oneline    -->  glo  
 git branch --all     -->  gba  
 git add .            -->  ga  
 git checkout main    -->  gitcm  
