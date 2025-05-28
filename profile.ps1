@@ -24,10 +24,10 @@ function ga(){
     & git add .
 }
 
-# git checkout main
-function gitcm(){
+# git switch (back to) main
+function gsm(){
     Write-Host ' '     # for blank line
-    & git checkout main
+    & git switch main
 }
 
 # touch for creating files.
